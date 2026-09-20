@@ -2,17 +2,17 @@ import React from 'react';
 import { NavLink, useLocation, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  LayoutDashboard, 
-  FolderKanban, 
-  PlusCircle, 
-  Users, 
-  Sparkles, 
-  Layers, 
-  BarChart3, 
-  MessageSquare, 
-  Settings, 
-  X, 
+import {
+  LayoutDashboard,
+  FolderKanban,
+  PlusCircle,
+  Users,
+  Sparkles,
+  Layers,
+  BarChart3,
+  MessageSquare,
+  Settings,
+  X,
   Globe,
   Star,
   Calculator,
@@ -51,8 +51,8 @@ export default function Sidebar() {
   const renderNavList = (items) => (
     items.map((item) => {
       const Icon = item.icon;
-      const isActive = item.exact 
-        ? location.pathname === item.path 
+      const isActive = item.exact
+        ? location.pathname === item.path
         : location.pathname.startsWith(item.path) && item.path !== '/';
 
       return (
@@ -90,17 +90,7 @@ export default function Sidebar() {
         {/* Logo Brand Header */}
         <div className="p-5 border-b border-[#EAE3D9] flex items-center justify-between sticky top-0 bg-white z-10">
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#5C381E] to-[#3A2114] flex items-center justify-center text-[#DFCA9B] font-serif font-bold text-lg shadow-sm">
-              V
-            </div>
-            <div className="flex flex-col">
-              <span className="font-serif font-bold text-base tracking-wider text-[#3A2114]">
-                VANVAS
-              </span>
-              <span className="text-[9px] font-bold tracking-widest text-[#8B5A2B] uppercase">
-                Studio CMS & Control
-              </span>
-            </div>
+            <img src="/images/logp-bg.png" alt="logo" className="w-30 h-20 p-2 rounded-lg bg-gradient-to-r from-[#5C381E] to-[#3A2114]" />
           </Link>
 
           {/* Close button on mobile */}
