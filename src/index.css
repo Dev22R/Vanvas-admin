@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, Cambria, serif;
+  --font-display: 'Cinzel', serif;
+
+  --color-vanvas-cream: #FAF8F5;
+  --color-vanvas-warm: #F4EFEA;
+  --color-vanvas-sand: #EAE3D9;
+  --color-vanvas-taupe: #D3C5B4;
+  --color-vanvas-cashmere: #BFA993;
+  --color-vanvas-bronze: #A47551;
+  --color-vanvas-wood: #7E4F2D;
+  --color-vanvas-brown: #5C381E;
+  --color-vanvas-espresso: #3A2114;
+  --color-vanvas-dark: #1E120B;
+  --color-vanvas-gold: #C5A059;
+  --color-vanvas-gold-light: #DFCA9B;
+}
+
+@layer base {
+  * {
+    border-color: #EAE3D9;
+  }
+  
+  html, body {
+    height: 100%;
+    background-color: #FAF8F5;
+    color: #2C1810;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-serif-luxury {
+    font-family: var(--font-serif);
+  }
+
+  .font-brand {
+    font-family: var(--font-display);
+    letter-spacing: 0.15em;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D3C5B4;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8B5A2B;
+}
+
+/* Glass & Card Utilities */
+.admin-card {
+  background: #FFFFFF;
+  border: 1px solid #EAE3D9;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 20px -4px rgba(61, 43, 31, 0.05);
+}
+
+.admin-glass {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(234, 227, 217, 0.8);
+}
